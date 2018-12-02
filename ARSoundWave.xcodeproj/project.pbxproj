@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49A119AA21B431E900A5CCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119A921B431E900A5CCAB /* AppDelegate.swift */; };
+		49A119AC21B431E900A5CCAB /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A119AB21B431E900A5CCAB /* Scene.sks */; };
+		49A119AE21B431E900A5CCAB /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119AD21B431E900A5CCAB /* Scene.swift */; };
+		49A119B021B431E900A5CCAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119AF21B431E900A5CCAB /* ViewController.swift */; };
+		49A119B321B431E900A5CCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A119B121B431E900A5CCAB /* Main.storyboard */; };
+		49A119B521B431EA00A5CCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A119B421B431EA00A5CCAB /* Assets.xcassets */; };
+		49A119B821B431EA00A5CCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */; };
+		49A119C321B431EA00A5CCAB /* ARSoundWaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119C221B431EA00A5CCAB /* ARSoundWaveTests.swift */; };
+		49A119CE21B431EA00A5CCAB /* ARSoundWaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119CD21B431EA00A5CCAB /* ARSoundWaveUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49A119BF21B431EA00A5CCAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A1199E21B431E900A5CCAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A119A521B431E900A5CCAB;
+			remoteInfo = ARSoundWave;
+		};
+		49A119CA21B431EA00A5CCAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A1199E21B431E900A5CCAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A119A521B431E900A5CCAB;
+			remoteInfo = ARSoundWave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49A119A621B431E900A5CCAB /* ARSoundWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSoundWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A119A921B431E900A5CCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49A119AB21B431E900A5CCAB /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		49A119AD21B431E900A5CCAB /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		49A119AF21B431E900A5CCAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49A119B221B431E900A5CCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49A119B421B431EA00A5CCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49A119B721B431EA00A5CCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49A119B921B431EA00A5CCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A119BE21B431EA00A5CCAB /* ARSoundWaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSoundWaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A119C221B431EA00A5CCAB /* ARSoundWaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSoundWaveTests.swift; sourceTree = "<group>"; };
+		49A119C421B431EA00A5CCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A119C921B431EA00A5CCAB /* ARSoundWaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSoundWaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A119CD21B431EA00A5CCAB /* ARSoundWaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSoundWaveUITests.swift; sourceTree = "<group>"; };
+		49A119CF21B431EA00A5CCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49A119A321B431E900A5CCAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119BB21B431EA00A5CCAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119C621B431EA00A5CCAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49A1199D21B431E900A5CCAB = {
+			isa = PBXGroup;
+			children = (
+				49A119A821B431E900A5CCAB /* ARSoundWave */,
+				49A119C121B431EA00A5CCAB /* ARSoundWaveTests */,
+				49A119CC21B431EA00A5CCAB /* ARSoundWaveUITests */,
+				49A119A721B431E900A5CCAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49A119A721B431E900A5CCAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49A119A621B431E900A5CCAB /* ARSoundWave.app */,
+				49A119BE21B431EA00A5CCAB /* ARSoundWaveTests.xctest */,
+				49A119C921B431EA00A5CCAB /* ARSoundWaveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49A119A821B431E900A5CCAB /* ARSoundWave */ = {
+			isa = PBXGroup;
+			children = (
+				49A119A921B431E900A5CCAB /* AppDelegate.swift */,
+				49A119AB21B431E900A5CCAB /* Scene.sks */,
+				49A119AD21B431E900A5CCAB /* Scene.swift */,
+				49A119AF21B431E900A5CCAB /* ViewController.swift */,
+				49A119B121B431E900A5CCAB /* Main.storyboard */,
+				49A119B421B431EA00A5CCAB /* Assets.xcassets */,
+				49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */,
+				49A119B921B431EA00A5CCAB /* Info.plist */,
+			);
+			path = ARSoundWave;
+			sourceTree = "<group>";
+		};
+		49A119C121B431EA00A5CCAB /* ARSoundWaveTests */ = {
+			isa = PBXGroup;
+			children = (
+				49A119C221B431EA00A5CCAB /* ARSoundWaveTests.swift */,
+				49A119C421B431EA00A5CCAB /* Info.plist */,
+			);
+			path = ARSoundWaveTests;
+			sourceTree = "<group>";
+		};
+		49A119CC21B431EA00A5CCAB /* ARSoundWaveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49A119CD21B431EA00A5CCAB /* ARSoundWaveUITests.swift */,
+				49A119CF21B431EA00A5CCAB /* Info.plist */,
+			);
+			path = ARSoundWaveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49A119A521B431E900A5CCAB /* ARSoundWave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A119D221B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWave" */;
+			buildPhases = (
+				49A119A221B431E900A5CCAB /* Sources */,
+				49A119A321B431E900A5CCAB /* Frameworks */,
+				49A119A421B431E900A5CCAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARSoundWave;
+			productName = ARSoundWave;
+			productReference = 49A119A621B431E900A5CCAB /* ARSoundWave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49A119BD21B431EA00A5CCAB /* ARSoundWaveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A119D521B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWaveTests" */;
+			buildPhases = (
+				49A119BA21B431EA00A5CCAB /* Sources */,
+				49A119BB21B431EA00A5CCAB /* Frameworks */,
+				49A119BC21B431EA00A5CCAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A119C021B431EA00A5CCAB /* PBXTargetDependency */,
+			);
+			name = ARSoundWaveTests;
+			productName = ARSoundWaveTests;
+			productReference = 49A119BE21B431EA00A5CCAB /* ARSoundWaveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49A119C821B431EA00A5CCAB /* ARSoundWaveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A119D821B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWaveUITests" */;
+			buildPhases = (
+				49A119C521B431EA00A5CCAB /* Sources */,
+				49A119C621B431EA00A5CCAB /* Frameworks */,
+				49A119C721B431EA00A5CCAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A119CB21B431EA00A5CCAB /* PBXTargetDependency */,
+			);
+			name = ARSoundWaveUITests;
+			productName = ARSoundWaveUITests;
+			productReference = 49A119C921B431EA00A5CCAB /* ARSoundWaveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49A1199E21B431E900A5CCAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Benni ";
+				TargetAttributes = {
+					49A119A521B431E900A5CCAB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					49A119BD21B431EA00A5CCAB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 49A119A521B431E900A5CCAB;
+					};
+					49A119C821B431EA00A5CCAB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 49A119A521B431E900A5CCAB;
+					};
+				};
+			};
+			buildConfigurationList = 49A119A121B431E900A5CCAB /* Build configuration list for PBXProject "ARSoundWave" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49A1199D21B431E900A5CCAB;
+			productRefGroup = 49A119A721B431E900A5CCAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49A119A521B431E900A5CCAB /* ARSoundWave */,
+				49A119BD21B431EA00A5CCAB /* ARSoundWaveTests */,
+				49A119C821B431EA00A5CCAB /* ARSoundWaveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49A119A421B431E900A5CCAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A119AC21B431E900A5CCAB /* Scene.sks in Resources */,
+				49A119B821B431EA00A5CCAB /* LaunchScreen.storyboard in Resources */,
+				49A119B521B431EA00A5CCAB /* Assets.xcassets in Resources */,
+				49A119B321B431E900A5CCAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119BC21B431EA00A5CCAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119C721B431EA00A5CCAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49A119A221B431E900A5CCAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A119B021B431E900A5CCAB /* ViewController.swift in Sources */,
+				49A119AE21B431E900A5CCAB /* Scene.swift in Sources */,
+				49A119AA21B431E900A5CCAB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119BA21B431EA00A5CCAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A119C321B431EA00A5CCAB /* ARSoundWaveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A119C521B431EA00A5CCAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A119CE21B431EA00A5CCAB /* ARSoundWaveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49A119C021B431EA00A5CCAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A119A521B431E900A5CCAB /* ARSoundWave */;
+			targetProxy = 49A119BF21B431EA00A5CCAB /* PBXContainerItemProxy */;
+		};
+		49A119CB21B431EA00A5CCAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A119A521B431E900A5CCAB /* ARSoundWave */;
+			targetProxy = 49A119CA21B431EA00A5CCAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49A119B121B431E900A5CCAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A119B221B431E900A5CCAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A119B721B431EA00A5CCAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49A119D021B431EA00A5CCAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49A119D121B431EA00A5CCAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49A119D321B431EA00A5CCAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49A119D421B431EA00A5CCAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49A119D621B431EA00A5CCAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWaveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARSoundWave.app/ARSoundWave";
+			};
+			name = Debug;
+		};
+		49A119D721B431EA00A5CCAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWaveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARSoundWave.app/ARSoundWave";
+			};
+			name = Release;
+		};
+		49A119D921B431EA00A5CCAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWaveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARSoundWave;
+			};
+			name = Debug;
+		};
+		49A119DA21B431EA00A5CCAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
+				INFOPLIST_FILE = ARSoundWaveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BAS.ARSoundWaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARSoundWave;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49A119A121B431E900A5CCAB /* Build configuration list for PBXProject "ARSoundWave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A119D021B431EA00A5CCAB /* Debug */,
+				49A119D121B431EA00A5CCAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A119D221B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A119D321B431EA00A5CCAB /* Debug */,
+				49A119D421B431EA00A5CCAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A119D521B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWaveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A119D621B431EA00A5CCAB /* Debug */,
+				49A119D721B431EA00A5CCAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A119D821B431EA00A5CCAB /* Build configuration list for PBXNativeTarget "ARSoundWaveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A119D921B431EA00A5CCAB /* Debug */,
+				49A119DA21B431EA00A5CCAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49A1199E21B431E900A5CCAB /* Project object */;
+}
