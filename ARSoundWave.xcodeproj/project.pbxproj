@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490026C821B47DF900518F34 /* ImageInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490026C721B47DF900518F34 /* ImageInformationViewController.swift */; };
 		49A119AA21B431E900A5CCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119A921B431E900A5CCAB /* AppDelegate.swift */; };
 		49A119AC21B431E900A5CCAB /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A119AB21B431E900A5CCAB /* Scene.sks */; };
 		49A119AE21B431E900A5CCAB /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119AD21B431E900A5CCAB /* Scene.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490026C721B47DF900518F34 /* ImageInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformationViewController.swift; sourceTree = "<group>"; };
 		49A119A621B431E900A5CCAB /* ARSoundWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSoundWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A119A921B431E900A5CCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A119AB21B431E900A5CCAB /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				49A119AD21B431E900A5CCAB /* Scene.swift */,
 				49A119AF21B431E900A5CCAB /* ViewController.swift */,
 				49A119B121B431E900A5CCAB /* Main.storyboard */,
+				490026C721B47DF900518F34 /* ImageInformationViewController.swift */,
 				49A119B421B431EA00A5CCAB /* Assets.xcassets */,
 				49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */,
 				49A119B921B431EA00A5CCAB /* Info.plist */,
@@ -266,6 +269,7 @@
 				49A119B021B431E900A5CCAB /* ViewController.swift in Sources */,
 				49A119AE21B431E900A5CCAB /* Scene.swift in Sources */,
 				49A119AA21B431E900A5CCAB /* AppDelegate.swift in Sources */,
+				490026C821B47DF900518F34 /* ImageInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
 				INFOPLIST_FILE = ARSoundWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AQ3QVZUW9;
 				INFOPLIST_FILE = ARSoundWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
