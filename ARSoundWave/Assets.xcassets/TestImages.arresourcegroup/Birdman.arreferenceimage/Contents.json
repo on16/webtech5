@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Ton1.jpg"
+      "filename" : "Birdman.jpg"
     }
   ],
   "info" : {
@@ -10,7 +10,7 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 15,
+    "width" : 17,
     "unit" : "centimeters"
   }
 }

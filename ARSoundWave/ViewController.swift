@@ -11,9 +11,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet var sceneView: ARSKView!
     var selectedImage : ImageInformation?
     
-    let images = [
-        "Sounds" : ImageInformation(imageName: "Ton1", imageFile: UIImage(named: "Ton1")!)
-    ]
+    let images = ["Birdman" : ImageInformation(imageName: "Birdman", imageFile: UIImage(named: "Birdman")!)]
     
     
     override func viewDidLoad() {
@@ -27,7 +25,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             sceneView.presentScene(scene)
         }
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "Soundwaves", bundle: nil) else {
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "TestImages", bundle: nil) else {
             fatalError("Missing catalog resources.")
         }
         
@@ -53,7 +51,6 @@ class ViewController: UIViewController, ARSKViewDelegate {
         
         return nil
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showImageInformation"{
