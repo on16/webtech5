@@ -11,7 +11,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet var sceneView: ARSKView!
     var selectedImage : ImageInformation?
     
-    let images = ["Birdman" : ImageInformation(imageName: "Birdman", imageFile: UIImage(named: "Birdman")!)]
+    let images = ["soundwave" : ImageInformation(imageName: "soundwave", imageFile: UIImage(named: "soundwave")!)]
     
     
     override func viewDidLoad() {
