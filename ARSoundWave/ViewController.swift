@@ -13,10 +13,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     let images = [
         "soundwave" : ImageInformation(
-                imageName: "soundwave",
+                imageName: "TheDubstepPreview",
                 imageFile: UIImage(named: "soundwave")!),
         "secondSoundwave" : ImageInformation(
-                imageName: "WBBL - Real Thing",
+                imageName: "Ahrix Nova NCS Release",
                 imageFile: UIImage(named: "secondSoundwave")!)
     ]
     

@@ -20,7 +20,9 @@ class ImageInformationViewController : UIViewController {
 
     @IBAction func playSound(_ sender: UIButton) {
 
-        guard let path = Bundle.main.path(forResource: "TheDubstepPreview", ofType: "mp3", inDirectory: "AudioFiles") else { return }
+        let soundFileName = imageInformation?.imageName
+
+        guard let path = Bundle.main.path(forResource: soundFileName, ofType: "mp3", inDirectory: "AudioFiles") else { return }
         let url = URL(fileURLWithPath: path)
         let player = AVPlayer(url: url)
         let playerViewController = AVPlayerViewController()
