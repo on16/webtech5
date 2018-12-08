@@ -44,29 +44,49 @@
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="CMI-wF-DpD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-RS-ym8">
-                                <rect key="frame" x="48" y="220" width="279" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bild Titel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-R8-I7W">
-                                <rect key="frame" x="160" y="154" width="54" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-R8-I7W">
+                                <rect key="frame" x="156.5" y="324" width="62.5" height="19.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bild Titel">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-RS-ym8">
+                                <rect key="frame" x="16" y="64" width="343" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3Y-Ut-LfK">
+                                <rect key="frame" x="152.72459331496179" y="427" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Abspielen"/>
+                                <connections>
+                                    <action selector="playSound:" destination="6F4-dz-q9Z" eventType="touchUpInside" id="0QO-Er-6l8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="NWq-R8-I7W" firstAttribute="centerY" secondItem="2o9-ii-zH8" secondAttribute="centerY" id="8SC-OR-Jni"/>
+                            <constraint firstItem="NWq-R8-I7W" firstAttribute="centerX" secondItem="2o9-ii-zH8" secondAttribute="centerX" id="Nd3-wK-kDd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bYN-ss-14y"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="1Pm-RS-ym8" id="H5v-q6-9Iu"/>
                         <outlet property="nameLabel" destination="NWq-R8-I7W" id="uLw-ky-hfa"/>
+                        <outlet property="playSound" destination="x3Y-Ut-LfK" id="7T6-TT-Rs7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAu-Qc-GJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="658.92053973013503"/>
+            <point key="canvasLocation" x="1368.8" y="124.58770614692655"/>
         </scene>
     </scenes>
 </document>

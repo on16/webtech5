@@ -12,10 +12,13 @@ class ViewController: UIViewController, ARSKViewDelegate {
     var selectedImage : ImageInformation?
     
     let images = [
-        "soundwave" : ImageInformation(imageName: "soundwave", imageFile: UIImage(named: "soundwave")!),
-        "secondSoundwave" : ImageInformation(imageName: "secondSoundwave", imageFile: UIImage(named: "secondSoundwave")!)
+        "soundwave" : ImageInformation(
+                imageName: "soundwave",
+                imageFile: UIImage(named: "soundwave")!),
+        "secondSoundwave" : ImageInformation(
+                imageName: "WBBL - Real Thing",
+                imageFile: UIImage(named: "secondSoundwave")!)
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         }
         
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "TestImages", bundle: nil) else {
-            fatalError("Missing catalog resources.")
+            fatalError("Missing reference images")
         }
         
         let configuration = ARWorldTrackingConfiguration()
@@ -48,9 +51,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             self.selectedImage = scannedImage
             
             self.performSegue(withIdentifier: "showImageInformation", sender: self)
-            
         }
-        
         return nil
     }
     

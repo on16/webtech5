@@ -17,6 +17,9 @@
 		49A119B821B431EA00A5CCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */; };
 		49A119C321B431EA00A5CCAB /* ARSoundWaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119C221B431EA00A5CCAB /* ARSoundWaveTests.swift */; };
 		49A119CE21B431EA00A5CCAB /* ARSoundWaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A119CD21B431EA00A5CCAB /* ARSoundWaveUITests.swift */; };
+		49DBEF1121BC07460043C4A9 /* AudioFiles in Resources */ = {isa = PBXBuildFile; fileRef = 49DBEF1021BC07460043C4A9 /* AudioFiles */; };
+		49DBEF1521BC30BB0043C4A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DBEF1421BC30BB0043C4A9 /* AVFoundation.framework */; };
+		49DBEF1721BC36610043C4A9 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DBEF1621BC36610043C4A9 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		49A119C921B431EA00A5CCAB /* ARSoundWaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSoundWaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A119CD21B431EA00A5CCAB /* ARSoundWaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSoundWaveUITests.swift; sourceTree = "<group>"; };
 		49A119CF21B431EA00A5CCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49DBEF1021BC07460043C4A9 /* AudioFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AudioFiles; sourceTree = "<group>"; };
+		49DBEF1221BC12C10043C4A9 /* klavier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = klavier.mp3; sourceTree = "<group>"; };
+		49DBEF1421BC30BB0043C4A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		49DBEF1621BC36610043C4A9 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DBEF1721BC36610043C4A9 /* AVKit.framework in Frameworks */,
+				49DBEF1521BC30BB0043C4A9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +96,7 @@
 				49A119C121B431EA00A5CCAB /* ARSoundWaveTests */,
 				49A119CC21B431EA00A5CCAB /* ARSoundWaveUITests */,
 				49A119A721B431E900A5CCAB /* Products */,
+				49DBEF1321BC30BB0043C4A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +113,9 @@
 		49A119A821B431E900A5CCAB /* ARSoundWave */ = {
 			isa = PBXGroup;
 			children = (
+				49DBEF1021BC07460043C4A9 /* AudioFiles */,
 				49A119A921B431E900A5CCAB /* AppDelegate.swift */,
+				49DBEF1221BC12C10043C4A9 /* klavier.mp3 */,
 				49A119AB21B431E900A5CCAB /* Scene.sks */,
 				49A119AD21B431E900A5CCAB /* Scene.swift */,
 				49A119AF21B431E900A5CCAB /* ViewController.swift */,
@@ -132,6 +144,15 @@
 				49A119CF21B431EA00A5CCAB /* Info.plist */,
 			);
 			path = ARSoundWaveUITests;
+			sourceTree = "<group>";
+		};
+		49DBEF1321BC30BB0043C4A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49DBEF1621BC36610043C4A9 /* AVKit.framework */,
+				49DBEF1421BC30BB0043C4A9 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A119AC21B431E900A5CCAB /* Scene.sks in Resources */,
+				49DBEF1121BC07460043C4A9 /* AudioFiles in Resources */,
 				49A119B821B431EA00A5CCAB /* LaunchScreen.storyboard in Resources */,
 				49A119B521B431EA00A5CCAB /* Assets.xcassets in Resources */,
 				49A119B321B431E900A5CCAB /* Main.storyboard in Resources */,
