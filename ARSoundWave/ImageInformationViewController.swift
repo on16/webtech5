@@ -21,6 +21,7 @@ class ImageInformationViewController : UIViewController {
     @IBAction func playSound(_ sender: UIButton) {
 
         let soundFileName = imageInformation?.imageName
+        let imageFile = imageInformation?.imageFile
 
         guard let path = Bundle.main.path(forResource: soundFileName, ofType: "mp3", inDirectory: "AudioFiles") else { return }
         let url = URL(fileURLWithPath: path)
@@ -29,6 +30,13 @@ class ImageInformationViewController : UIViewController {
         playerViewController.player = player
 
         self.present(playerViewController, animated: true) {
+
+            if let frame = playerViewController.contentOverlayView?.bounds{
+                let imageView = UIImageView(image: imageFile)
+                imageView.frame = frame
+                playerViewController.contentOverlayView?.addSubview(imageView)
+            }
+
             playerViewController.player!.play()
         }
     }

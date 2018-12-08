@@ -14,10 +14,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
     let images = [
         "soundwave" : ImageInformation(
                 imageName: "TheDubstepPreview",
-                imageFile: UIImage(named: "soundwave")!),
+                imageFile: UIImage(named: "Image1")!),
         "secondSoundwave" : ImageInformation(
                 imageName: "Ahrix Nova NCS Release",
-                imageFile: UIImage(named: "secondSoundwave")!)
+                imageFile: UIImage(named: "Image2")!)
     ]
     
     override func viewDidLoad() {
