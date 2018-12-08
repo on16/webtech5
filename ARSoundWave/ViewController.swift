@@ -11,7 +11,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet var sceneView: ARSKView!
     var selectedImage : ImageInformation?
     
-    let images = ["soundwave" : ImageInformation(imageName: "soundwave", imageFile: UIImage(named: "soundwave")!)]
+    let images = [
+        "soundwave" : ImageInformation(imageName: "soundwave", imageFile: UIImage(named: "soundwave")!),
+        "secondSoundwave" : ImageInformation(imageName: "secondSoundwave", imageFile: UIImage(named: "secondSoundwave")!)
+    ]
     
     
     override func viewDidLoad() {
@@ -35,8 +38,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
-    
-    // MARK: - ARSKViewDelegate
+
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         
         if let imageAnchor = anchor as? ARImageAnchor,
