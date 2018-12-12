@@ -3,6 +3,7 @@ import AVFoundation
 import AVKit
 
 class ImageInformationViewController : UIViewController {
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playSound: UIButton!
@@ -23,7 +24,10 @@ class ImageInformationViewController : UIViewController {
         let soundFileName = imageInformation?.imageName
         let imageFile = imageInformation?.imageFile
 
-        guard let path = Bundle.main.path(forResource: soundFileName, ofType: "mp3", inDirectory: "AudioFiles") else { return }
+        guard let path = Bundle.main.path(
+                forResource: soundFileName, ofType: "mp3", inDirectory: "AudioFiles"
+        ) else { return }
+
         let url = URL(fileURLWithPath: path)
         let player = AVPlayer(url: url)
         let playerViewController = AVPlayerViewController()

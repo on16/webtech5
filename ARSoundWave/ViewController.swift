@@ -8,6 +8,7 @@ struct ImageInformation {
 }
 
 class ViewController: UIViewController, ARSKViewDelegate {
+
     @IBOutlet var sceneView: ARSKView!
     var selectedImage : ImageInformation?
     
@@ -34,22 +35,18 @@ class ViewController: UIViewController, ARSKViewDelegate {
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "TestImages", bundle: nil) else {
             fatalError("Missing reference images")
         }
-        
+
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
-        
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
 
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        
         if let imageAnchor = anchor as? ARImageAnchor,
             let referenceImageName = imageAnchor.referenceImage.name,
             let scannedImage =  self.images[referenceImageName] {
-            
             self.selectedImage = scannedImage
-            
             self.performSegue(withIdentifier: "showImageInformation", sender: self)
         }
         return nil
