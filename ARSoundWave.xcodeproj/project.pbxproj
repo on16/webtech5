@@ -20,6 +20,7 @@
 		49DBEF1121BC07460043C4A9 /* AudioFiles in Resources */ = {isa = PBXBuildFile; fileRef = 49DBEF1021BC07460043C4A9 /* AudioFiles */; };
 		49DBEF1521BC30BB0043C4A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DBEF1421BC30BB0043C4A9 /* AVFoundation.framework */; };
 		49DBEF1721BC36610043C4A9 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DBEF1621BC36610043C4A9 /* AVKit.framework */; };
+		49E969DF21C13CDC007392E9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E969DE21C13CDC007392E9 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		49DBEF1221BC12C10043C4A9 /* klavier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = klavier.mp3; sourceTree = "<group>"; };
 		49DBEF1421BC30BB0043C4A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		49DBEF1621BC36610043C4A9 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		49E969DE21C13CDC007392E9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				49A119B421B431EA00A5CCAB /* Assets.xcassets */,
 				49A119B621B431EA00A5CCAB /* LaunchScreen.storyboard */,
 				49A119B921B431EA00A5CCAB /* Info.plist */,
+				49E969DE21C13CDC007392E9 /* StartViewController.swift */,
 			);
 			path = ARSoundWave;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E969DF21C13CDC007392E9 /* StartViewController.swift in Sources */,
 				49A119B021B431E900A5CCAB /* ViewController.swift in Sources */,
 				49A119AE21B431E900A5CCAB /* Scene.swift in Sources */,
 				49A119AA21B431E900A5CCAB /* AppDelegate.swift in Sources */,
