@@ -10,23 +10,42 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <scene sceneID="v0G-Hy-C5M">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARSoundWave" customModuleProvider="target" sceneMemberID="viewController">
-                    <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
+                <viewController id="lyR-oN-Ezu" customClass="ViewController" customModule="ARSoundWave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l0B-gl-Z1G"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6a-I5-t6b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n0r-J1-sEF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arskView>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyF-uC-3g5" userLabel="Scene View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arskView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doi-5q-k5R">
+                                <rect key="frame" x="16" y="28" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="zkB-nW-L3H" kind="presentation" modalTransitionStyle="crossDissolve" id="zgc-eo-Odb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
-                        <segue destination="6F4-dz-q9Z" kind="presentation" identifier="showImageInformation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0Hz-6V-KVI"/>
-                        <segue destination="zkB-nW-L3H" kind="presentation" identifier="closeCamera" modalTransitionStyle="crossDissolve" id="VRH-yg-KVD"/>
+                        <outlet property="sceneView" destination="TyF-uC-3g5" id="1ju-D0-PbG"/>
+                        <segue destination="6F4-dz-q9Z" kind="presentation" identifier="showImageInformation" modalTransitionStyle="crossDissolve" id="QQn-Nx-oHI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGF-UD-ygg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="124.58770614692655"/>
         </scene>
         <!--Image Information View Controller-->
         <scene sceneID="tQ6-yj-FWP">
@@ -47,7 +66,9 @@
                                     <color key="titleColor" red="0.34479062222165846" green="0.60405165683939144" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="CMI-wF-DpD"/>
+                                    <action selector="dismissView:" destination="Vyu-eN-Bez" eventType="touchUpInside" id="JER-yW-Cfl"/>
+                                    <action selector="dismissView:" destination="6F4-dz-q9Z" eventType="touchUpInside" id="yrZ-ED-q6R"/>
+                                    <segue destination="lyR-oN-Ezu" kind="presentation" identifier="closePlayer" id="jOx-af-ePP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-R8-I7W">
@@ -91,6 +112,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAu-Qc-GJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vyu-eN-Bez" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1368.8" y="124.58770614692655"/>
         </scene>
@@ -112,7 +134,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Scannen"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="crossDissolve" id="kVd-hu-8ik"/>
+                                    <segue destination="lyR-oN-Ezu" kind="presentation" modalTransitionStyle="crossDissolve" id="e6u-y7-NAm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +147,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kVd-hu-8ik"/>
+        <segue reference="QQn-Nx-oHI"/>
+        <segue reference="jOx-af-ePP"/>
     </inferredMetricsTieBreakers>
 </document>
