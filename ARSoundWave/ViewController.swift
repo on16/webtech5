@@ -43,9 +43,9 @@ class ViewController: UIViewController, ARSKViewDelegate {
             imageName: "EN_Grafschaft",
             imageFile: UIImage(named: "Image2")!)*/
         "de-einfuehrung" : ImageInformation(
-                imageTitle: "Einführung",
-                imageDescription: "This is an awesome text",
-                imageFile: UIImage(named: "Image2")!,
+                imageTitle: "Mona Lischen",
+                imageDescription: "Mona Lisa ist ein weltberühmtes Ölgemälde von Leonardo da Vinci aus der Hochphase der italienischen Renaissance Anfang des 16. Jahrhunderts.",
+                imageFile: UIImage(named: "Moni")!,
                 soundFileName: "DE_Einfuehrung")
     ]
     
