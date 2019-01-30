@@ -13,17 +13,37 @@ class ViewController: UIViewController, ARSKViewDelegate {
     var selectedImage : ImageInformation?
     
     let images = [
-        "soundwave" : ImageInformation(
-                imageName: "TheDubstepPreview",
-                imageFile: UIImage(named: "Image1")!),
-        "secondSoundwave" : ImageInformation(
-                imageName: "Ahrix Nova NCS Release",
-                imageFile: UIImage(named: "Image2")!)
+        // Asign the name of the image left to ImageInformation
+        "DE-Bronzehorn" : ImageInformation(
+            imageName: "DE_Bronzehorn",
+            imageFile: UIImage(named: "Image2")!),
+        "DE-Einfuehrung" : ImageInformation(
+            imageName: "DE_Einfuehrung",
+            imageFile: UIImage(named: "Image2")!),
+        "DE-Eisenzeit" : ImageInformation(
+            imageName: "DE_Eisenzeit",
+            imageFile: UIImage(named: "Image2")!),
+        "DE-Einfuehrung" : ImageInformation(
+            imageName: "DE_Grafschaft",
+            imageFile: UIImage(named: "Image2")!),
+        "EN-Bronzehorn" : ImageInformation(
+            imageName: "EN_Bronzehorn",
+            imageFile: UIImage(named: "Image2")!),
+        "EN-Einfuehrung" : ImageInformation(
+            imageName: "EN_Einfuehrung",
+            imageFile: UIImage(named: "Image2")!),
+        "EN-Eisenzeit" : ImageInformation(
+            imageName: "EN_Eisenzeit",
+            imageFile: UIImage(named: "Image2")!),
+        "EN-Grafschaft" : ImageInformation(
+            imageName: "EN_Grafschaft",
+            imageFile: UIImage(named: "Image2")!)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /* Dev Informations */
         sceneView.delegate = self
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
@@ -32,7 +52,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             sceneView.presentScene(scene)
         }
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "TestImages", bundle: nil) else {
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
             fatalError("Missing reference images")
         }
 

@@ -44,7 +44,7 @@ class ImageInformationViewController : UIViewController {
             playerViewController.player!.play()
         }
     }
-    
+
     @IBAction func dismissView(_ sender: Any) {
-    }
+        }
 }
