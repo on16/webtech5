@@ -101,6 +101,9 @@
                             <constraint firstItem="anC-F8-jgG" firstAttribute="centerY" secondItem="TYn-Ro-2gR" secondAttribute="centerY" id="PmI-cn-8sN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="modalView" destination="anC-F8-jgG" id="3IN-0o-VBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0F-ho-f8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,7 +209,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QQn-Nx-oHI"/>
         <segue reference="jOx-af-ePP"/>
     </inferredMetricsTieBreakers>
 </document>

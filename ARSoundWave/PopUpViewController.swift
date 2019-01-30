@@ -10,22 +10,20 @@ import UIKit
 
 class PopUpViewController: UIViewController {
 
+    @IBOutlet weak var modalView: UIView!
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        
+
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.view.layer.cornerRadius = 10
-        
+        self.modalView.layer.cornerRadius = 10
+
         self.showAnimate()
-        
-        
 
         // Do any additional setup after loading the view.
     }
-    
 
-  
-    
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)

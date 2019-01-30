@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     let images = [
         // Asign the name of the image left to ImageInformation
-        "DE-Bronzehorn" : ImageInformation(
+/*        "DE-Bronzehorn" : ImageInformation(
             imageName: "DE_Bronzehorn",
             imageFile: UIImage(named: "Image2")!),
         "DE-Einfuehrung" : ImageInformation(
@@ -37,7 +37,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
             imageFile: UIImage(named: "Image2")!),
         "EN-Grafschaft" : ImageInformation(
             imageName: "EN_Grafschaft",
-            imageFile: UIImage(named: "Image2")!)
+            imageFile: UIImage(named: "Image2")!)*/
+        "david" : ImageInformation(
+                imageName: "EN_Grafschaft",
+                imageFile: UIImage(named: "Image2")!)
     ]
     
     override func viewDidLoad() {
