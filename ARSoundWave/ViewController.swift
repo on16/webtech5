@@ -3,8 +3,10 @@ import SpriteKit
 import ARKit
 
 struct ImageInformation {
-    let imageName: String
+    let imageTitle: String
+    let imageDescription: String
     let imageFile: UIImage
+    let soundFileName: String
 }
 
 var popupState = false
@@ -41,8 +43,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
             imageName: "EN_Grafschaft",
             imageFile: UIImage(named: "Image2")!)*/
         "de-einfuehrung" : ImageInformation(
-                imageName: "DE_Einfuehrung",
-                imageFile: UIImage(named: "Image2")!)
+                imageTitle: "Einführung",
+                imageDescription: "This is an awesome text",
+                imageFile: UIImage(named: "Image2")!,
+                soundFileName: "DE_Einfuehrung")
     ]
     
     override func viewDidLoad() {
@@ -57,15 +61,14 @@ class ViewController: UIViewController, ARSKViewDelegate {
             sceneView.presentScene(scene)
         }
 
-        if popupState == false {
-            guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
-                fatalError("Missing reference images")
-            }
-
-            let configuration = ARWorldTrackingConfiguration()
-            configuration.detectionImages = referenceImages
-            sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
+            fatalError("Missing reference images")
         }
+
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.detectionImages = referenceImages
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+
     }
 
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
@@ -73,9 +76,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             let referenceImageName = imageAnchor.referenceImage.name,
             let scannedImage =  self.images[referenceImageName] {
             self.selectedImage = scannedImage
-            if popupState == false {
-                self.performSegue(withIdentifier: "showImageInformation", sender: self)
-            }
+            self.performSegue(withIdentifier: "showImageInformation", sender: self)
 
         }
         return nil

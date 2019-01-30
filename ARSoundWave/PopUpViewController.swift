@@ -13,7 +13,6 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var modalView: UIView!
 
     override func viewDidLoad() {
-
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
@@ -44,12 +43,12 @@ class PopUpViewController: UIViewController {
             if (finished)
             {
                 self.view.removeFromSuperview()
-                popupState = false
+
             }
         });
+        popupState = false
     }
     @IBAction func closePopUp(_ sender: Any) {
-        super.viewDidLoad()
         self.removeAnimate()
     }
     

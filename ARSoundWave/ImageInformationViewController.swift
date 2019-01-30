@@ -7,6 +7,7 @@ class ImageInformationViewController : UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playSound: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     var imageInformation : ImageInformation?
 
@@ -14,19 +15,23 @@ class ImageInformationViewController : UIViewController {
         super.viewDidLoad()
 
         if let actualImageInformation = imageInformation {
-            self.nameLabel.text = actualImageInformation.imageName
-            self.imageView.image = actualImageInformation.imageFile
+            self.nameLabel.text = actualImageInformation.imageTitle
+            self.descriptionLabel.text = actualImageInformation.imageDescription
+            imageView.image = actualImageInformation.imageFile
+            self.view.addSubview(imageView)
         }
     }
 
     @IBAction func playSound(_ sender: UIButton) {
 
-        let soundFileName = imageInformation?.imageName
+        let soundFileName = imageInformation?.soundFileName
         let imageFile = imageInformation?.imageFile
 
         guard let path = Bundle.main.path(
                 forResource: soundFileName, ofType: "mp3", inDirectory: "AudioFiles"
-        ) else { return }
+        ) else {
+            return
+        }
 
         let url = URL(fileURLWithPath: path)
         let player = AVPlayer(url: url)
@@ -44,7 +49,5 @@ class ImageInformationViewController : UIViewController {
             playerViewController.player!.play()
         }
     }
-
-    @IBAction func dismissView(_ sender: Any) {
-        }
+    @IBAction func dismissView(_ sender: Any) {}
 }
