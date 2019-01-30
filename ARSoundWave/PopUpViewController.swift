@@ -11,6 +11,12 @@ import UIKit
 class PopUpViewController: UIViewController {
 
     @IBOutlet weak var modalView: UIView!
+    
+   
+   
+    
+    
+   
 
     override func viewDidLoad() {
 
@@ -20,7 +26,7 @@ class PopUpViewController: UIViewController {
         self.modalView.layer.cornerRadius = 10
 
         self.showAnimate()
-
+     
         // Do any additional setup after loading the view.
     }
 
@@ -50,4 +56,40 @@ class PopUpViewController: UIViewController {
         self.removeAnimate();
     }
     
+    
+    
+    @IBOutlet weak var ScreenNumber: UILabel!
+   
+    
+
+    @IBOutlet weak var pageController: UIPageControl!
+    
+    
+    let pageText = ["hallo", "test", "wieso"];
+    
+    @IBAction func changeScreen(_ sender: Any) {
+        
+     
+        
+        for i in 0 ... 3 {
+            
+            if(self.pageController.currentPage==i){
+                self.ScreenNumber.text = "hi";
+            }
+            
+            
+            
+        }
+            
+            
+        
+        
+        
+        
+    }
+    
+    
+    
+        
+ 
 }

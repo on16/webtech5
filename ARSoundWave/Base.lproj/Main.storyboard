@@ -80,18 +80,39 @@
                                             <action selector="closePopUp:" destination="HKG-GT-PrK" eventType="touchUpInside" id="jhq-ax-sbO"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dies ist die Hilfe. Lorem Ipsum und so weiter" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-ng-pRJ">
-                                        <rect key="frame" x="36" y="23" width="191" height="175"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-l5-q6o">
+                                        <rect key="frame" x="19" y="46" width="246" height="275"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dies ist die Hilfe. Lorem Ipsum und so weiter" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFd-la-cgN">
+                                                <rect key="frame" x="36" y="8" width="224" height="175"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="275" id="NBY-cX-1Fe"/>
+                                            <constraint firstAttribute="width" constant="246" id="bER-FA-79I"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pw8-gw-fAd">
+                                        <rect key="frame" x="123" y="283.5" width="39" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <connections>
+                                            <action selector="PageControl:" destination="HKG-GT-PrK" eventType="valueChanged" id="RKY-IZ-ghp"/>
+                                            <action selector="change:" destination="HKG-GT-PrK" eventType="valueChanged" id="Xsm-Pk-3Me"/>
+                                            <action selector="changeScreen:" destination="HKG-GT-PrK" eventType="valueChanged" id="FI8-Pw-JAw"/>
+                                            <action selector="test:" destination="HKG-GT-PrK" eventType="valueChanged" id="Jqy-F5-ihU"/>
+                                        </connections>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.97929152397260277" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="285" id="QPl-b8-KAK"/>
+                                    <constraint firstItem="Wi2-l5-q6o" firstAttribute="centerY" secondItem="anC-F8-jgG" secondAttribute="centerY" id="Unf-jZ-KYd"/>
                                     <constraint firstAttribute="height" constant="338" id="wiO-7y-XHI"/>
+                                    <constraint firstItem="Wi2-l5-q6o" firstAttribute="centerX" secondItem="anC-F8-jgG" secondAttribute="centerX" id="zdl-IX-ZLP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -102,7 +123,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ScreenNumber" destination="UFd-la-cgN" id="sTX-fm-bVL"/>
                         <outlet property="modalView" destination="anC-F8-jgG" id="3IN-0o-VBV"/>
+                        <outlet property="pageControl" destination="Pw8-gw-fAd" id="4Fb-OR-StI"/>
+                        <outlet property="pageController" destination="Pw8-gw-fAd" id="hgE-mi-Ydf"/>
+                        <outlet property="scrMain" destination="Wi2-l5-q6o" id="Z1v-QS-Mfq"/>
+                        <outlet property="srcMain" destination="Wi2-l5-q6o" id="Wii-V7-6lj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0F-ho-f8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
