@@ -7,6 +7,8 @@ struct ImageInformation {
     let imageFile: UIImage
 }
 
+var popupState = false
+
 class ViewController: UIViewController, ARSKViewDelegate {
 
     @IBOutlet weak var sceneView: ARSKView!
@@ -38,8 +40,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         "EN-Grafschaft" : ImageInformation(
             imageName: "EN_Grafschaft",
             imageFile: UIImage(named: "Image2")!)*/
-        "david" : ImageInformation(
-                imageName: "EN_Grafschaft",
+        "de-einfuehrung" : ImageInformation(
+                imageName: "DE_Einfuehrung",
                 imageFile: UIImage(named: "Image2")!)
     ]
     
@@ -54,14 +56,16 @@ class ViewController: UIViewController, ARSKViewDelegate {
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
-        
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
-            fatalError("Missing reference images")
-        }
 
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.detectionImages = referenceImages
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        if popupState == false {
+            guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
+                fatalError("Missing reference images")
+            }
+
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.detectionImages = referenceImages
+            sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        }
     }
 
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
@@ -69,7 +73,10 @@ class ViewController: UIViewController, ARSKViewDelegate {
             let referenceImageName = imageAnchor.referenceImage.name,
             let scannedImage =  self.images[referenceImageName] {
             self.selectedImage = scannedImage
-            self.performSegue(withIdentifier: "showImageInformation", sender: self)
+            if popupState == false {
+                self.performSegue(withIdentifier: "showImageInformation", sender: self)
+            }
+
         }
         return nil
     }
@@ -82,6 +89,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             }
         }
     }
+
     @IBAction func showPopUp(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
         self.addChildViewController(popOverVC)

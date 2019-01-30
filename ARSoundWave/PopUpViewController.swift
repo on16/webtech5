@@ -26,6 +26,7 @@ class PopUpViewController: UIViewController {
 
     func showAnimate()
     {
+        popupState = true
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0;
         UIView.animate(withDuration: 0.25, animations: {
@@ -43,11 +44,13 @@ class PopUpViewController: UIViewController {
             if (finished)
             {
                 self.view.removeFromSuperview()
+                popupState = false
             }
         });
     }
     @IBAction func closePopUp(_ sender: Any) {
-        self.removeAnimate();
+        super.viewDidLoad()
+        self.removeAnimate()
     }
     
 }
