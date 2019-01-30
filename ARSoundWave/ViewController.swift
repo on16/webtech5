@@ -3,9 +3,13 @@ import SpriteKit
 import ARKit
 
 struct ImageInformation {
-    let imageName: String
+    let imageTitle: String
+    let imageDescription: String
     let imageFile: UIImage
+    let soundFileName: String
 }
+
+var popupState = false
 
 class ViewController: UIViewController, ARSKViewDelegate {
 
@@ -14,7 +18,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     let images = [
         // Asign the name of the image left to ImageInformation
-        "DE-Bronzehorn" : ImageInformation(
+/*        "DE-Bronzehorn" : ImageInformation(
             imageName: "DE_Bronzehorn",
             imageFile: UIImage(named: "Image2")!),
         "DE-Einfuehrung" : ImageInformation(
@@ -37,7 +41,12 @@ class ViewController: UIViewController, ARSKViewDelegate {
             imageFile: UIImage(named: "Image2")!),
         "EN-Grafschaft" : ImageInformation(
             imageName: "EN_Grafschaft",
-            imageFile: UIImage(named: "Image2")!)
+            imageFile: UIImage(named: "Image2")!)*/
+        "de-einfuehrung" : ImageInformation(
+                imageTitle: "Einführung",
+                imageDescription: "This is an awesome text",
+                imageFile: UIImage(named: "Image2")!,
+                soundFileName: "DE_Einfuehrung")
     ]
     
     override func viewDidLoad() {
@@ -51,7 +60,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
-        
+
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "ARImages", bundle: nil) else {
             fatalError("Missing reference images")
         }
@@ -59,6 +68,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+
     }
 
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
@@ -67,6 +77,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
             let scannedImage =  self.images[referenceImageName] {
             self.selectedImage = scannedImage
             self.performSegue(withIdentifier: "showImageInformation", sender: self)
+
         }
         return nil
     }
@@ -78,5 +89,13 @@ class ViewController: UIViewController, ARSKViewDelegate {
                 imageInformationVC.imageInformation = actualSelectedImage
             }
         }
+    }
+
+    @IBAction func showPopUp(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
     }
 }

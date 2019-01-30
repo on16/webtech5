@@ -35,6 +35,16 @@
                                     <segue destination="zkB-nW-L3H" kind="presentation" modalTransitionStyle="crossDissolve" id="zgc-eo-Odb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VI-9N-Kqv">
+                                <rect key="frame" x="308" y="617" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="showPopUp:" destination="lyR-oN-Ezu" eventType="touchUpInside" id="8eR-yQ-KcA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -46,6 +56,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGF-UD-ygg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="261.60000000000002" y="124.58770614692655"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="0ug-lF-Hqy">
+            <objects>
+                <viewController storyboardIdentifier="sbPopUpID" id="HKG-GT-PrK" customClass="PopUpViewController" customModule="ARSoundWave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRk-5m-Roa"/>
+                        <viewControllerLayoutGuide type="bottom" id="iU9-yr-2Xe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TYn-Ro-2gR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anC-F8-jgG">
+                                <rect key="frame" x="45" y="164.5" width="285" height="338"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-Si-FJH">
+                                        <rect key="frame" x="235" y="8" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="HKG-GT-PrK" eventType="touchUpInside" id="jhq-ax-sbO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dies ist die Hilfe. Lorem Ipsum und so weiter" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-ng-pRJ">
+                                        <rect key="frame" x="36" y="23" width="191" height="175"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.97929152397260277" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="QPl-b8-KAK"/>
+                                    <constraint firstAttribute="height" constant="338" id="wiO-7y-XHI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="anC-F8-jgG" firstAttribute="centerX" secondItem="TYn-Ro-2gR" secondAttribute="centerX" id="Pln-iS-lcr"/>
+                            <constraint firstItem="anC-F8-jgG" firstAttribute="centerY" secondItem="TYn-Ro-2gR" secondAttribute="centerY" id="PmI-cn-8sN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="modalView" destination="anC-F8-jgG" id="3IN-0o-VBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0F-ho-f8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="810.94452773613204"/>
         </scene>
         <!--Image Information View Controller-->
         <scene sceneID="tQ6-yj-FWP">
@@ -93,8 +155,22 @@
                                     <action selector="playSound:" destination="6F4-dz-q9Z" eventType="touchUpInside" id="0QO-Er-6l8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-RS-ym8">
-                                <rect key="frame" x="104" y="67" width="166" height="217"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml2-Be-cMb">
+                                <rect key="frame" x="16" y="363" width="343" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pm-RS-ym8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -106,6 +182,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="ml2-Be-cMb" id="SLa-Af-ibQ"/>
                         <outlet property="imageView" destination="1Pm-RS-ym8" id="H5v-q6-9Iu"/>
                         <outlet property="nameLabel" destination="NWq-R8-I7W" id="uLw-ky-hfa"/>
                         <outlet property="playSound" destination="x3Y-Ut-LfK" id="7T6-TT-Rs7"/>
@@ -147,7 +224,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QQn-Nx-oHI"/>
         <segue reference="jOx-af-ePP"/>
     </inferredMetricsTieBreakers>
 </document>
