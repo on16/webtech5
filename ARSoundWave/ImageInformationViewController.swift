@@ -43,6 +43,7 @@ class ImageInformationViewController : UIViewController {
             if let frame = playerViewController.contentOverlayView?.bounds{
                 let imageView = UIImageView(image: imageFile)
                 imageView.frame = frame
+                imageView.contentMode = .scaleAspectFill
                 playerViewController.contentOverlayView?.addSubview(imageView)
             }
 

@@ -9,8 +9,6 @@ struct ImageInformation {
     let soundFileName: String
 }
 
-var popupState = false
-
 class ViewController: UIViewController, ARSKViewDelegate {
 
     @IBOutlet weak var sceneView: ARSKView!
