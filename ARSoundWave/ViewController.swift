@@ -85,7 +85,11 @@ class ViewController: UIViewController, ARSKViewDelegate {
             if let imageInformationVC = segue.destination as? ImageInformationViewController,
                 let actualSelectedImage = selectedImage {
                 imageInformationVC.imageInformation = actualSelectedImage
+                sceneView.session.pause()
             }
+        } else if segue.identifier == "showHelpPages" {
+            sceneView.session.pause()
         }
     }
+
 }
