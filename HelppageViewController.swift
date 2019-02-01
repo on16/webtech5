@@ -52,4 +52,17 @@ class HelppageViewController: UIPageViewController, UIPageViewControllerDataSour
 
         return controllerList[nextIndex]
     }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return controllerList.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        if let identifier = controllerList.first {
+            if let index = controllerList.index(of: identifier) {
+                return index
+            }
+        }
+        return 0
+    }
 }
