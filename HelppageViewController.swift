@@ -28,7 +28,6 @@ class HelppageViewController: UIPageViewController, UIPageViewControllerDataSour
         if let firstStep = controllerList.first {
             self.setViewControllers([firstStep], direction: .forward, animated: false, completion: nil)
         }
-
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController)
@@ -65,4 +64,5 @@ class HelppageViewController: UIPageViewController, UIPageViewControllerDataSour
         }
         return 0
     }
+    
 }

@@ -45,7 +45,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ekq-vr-Frn" kind="presentation" id="wTU-Sb-NNr"/>
+                                    <segue destination="ekq-vr-Frn" kind="presentation" identifier="showHelpPages" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="wTU-Sb-NNr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -198,6 +198,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa2-7k-Rp4">
+                                <rect key="frame" x="16" y="28" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="zurück">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lyR-oN-Ezu" kind="presentation" identifier="closeHelpPages" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="J13-XK-UlQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -263,7 +273,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QQn-Nx-oHI"/>
-        <segue reference="jOx-af-ePP"/>
+        <segue reference="J13-XK-UlQ"/>
     </inferredMetricsTieBreakers>
 </document>
