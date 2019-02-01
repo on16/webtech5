@@ -8,7 +8,10 @@ class ImageInformationViewController : UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playSound: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    @IBOutlet weak var creator: UILabel!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var type: UILabel!
+    
     var imageInformation : ImageInformation?
 
     override func viewDidLoad() {
@@ -17,6 +20,9 @@ class ImageInformationViewController : UIViewController {
         if let actualImageInformation = imageInformation {
             self.nameLabel.text = actualImageInformation.imageTitle
             self.descriptionLabel.text = actualImageInformation.imageDescription
+            self.creator.text = actualImageInformation.imageCreator
+            self.year.text = actualImageInformation.imageYear
+            self.type.text = actualImageInformation.imageType
             imageView.image = actualImageInformation.imageFile
             self.view.addSubview(imageView)
         }
