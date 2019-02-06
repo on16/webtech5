@@ -24,10 +24,10 @@ class ImageInformationViewController : UIViewController {
             self.year.text = actualImageInformation.imageYear
             self.type.text = actualImageInformation.imageType
             imageView.image = actualImageInformation.imageFile
-            self.view.addSubview(imageView)
+            imageView.layer.zPosition = -5;
         }
     }
-    
+
 
     @IBAction func playSound(_ sender: UIButton) {
 
