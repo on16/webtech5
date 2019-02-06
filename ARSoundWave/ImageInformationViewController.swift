@@ -27,6 +27,7 @@ class ImageInformationViewController : UIViewController {
             self.view.addSubview(imageView)
         }
     }
+    
 
     @IBAction func playSound(_ sender: UIButton) {
 
