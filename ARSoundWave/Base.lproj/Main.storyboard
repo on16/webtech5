@@ -90,11 +90,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3Y-Ut-LfK">
-                                <rect key="frame" x="141" y="556" width="92" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3Y-Ut-LfK">
+                                <rect key="frame" x="140" y="556" width="103" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Abspielen"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="-17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Abspielen" image="PlayButton"/>
                                 <connections>
                                     <action selector="playSound:" destination="6F4-dz-q9Z" eventType="touchUpInside" id="0QO-Er-6l8"/>
                                 </connections>
@@ -411,8 +412,9 @@ über ein Ausstellungsstück zu bekommen.</string>
         <image name="HelpPicture1" width="348.48001098632812" height="348.48001098632812"/>
         <image name="HelpPicture2" width="348.48001098632812" height="348.48001098632812"/>
         <image name="HelpPicture3" width="348.48001098632812" height="348.48001098632812"/>
+        <image name="PlayButton" width="16" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e6u-y7-NAm"/>
+        <segue reference="jOx-af-ePP"/>
     </inferredMetricsTieBreakers>
 </document>
