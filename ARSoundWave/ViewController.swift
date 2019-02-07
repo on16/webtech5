@@ -6,9 +6,9 @@ struct ImageInformation {
     let imageTitle: String
     let imageDescription: String
     let imageFile: UIImage
-    let imageCreator: String
+    let imagePlaceOfDiscovery: String
     let imageYear: String
-    let imageType: String
+    let imageMaterial: String
     let soundFileName: String
 }
 
@@ -44,12 +44,12 @@ class ViewController: UIViewController, ARSKViewDelegate {
             imageName: "EN_Grafschaft",
             imageFile: UIImage(named: "Image2")!)*/
         "de-einfuehrung" : ImageInformation (
-                imageTitle: "Mona Lischen",
-                imageDescription: "Mona Lisa ist ein weltberühmtes Ölgemälde von Leonardo da Vinci aus der Hochphase der italienischen Renaissance Anfang des 16. Jahrhunderts.",
-                imageFile: UIImage(named: "Moni")!,
-                imageCreator: "Leonardo Da Vinci",
-                imageYear: "1904",
-                imageType: "Ölgemälde",
+                imageTitle: "Fibel",
+                imageDescription: "Fibeln waren im frühen Mittelalter verbreitet und wurden zur Befestigung von Umhängen verwendet.",
+                imageFile: UIImage(named: "Fibeln")!,
+                imagePlaceOfDiscovery: "Irland",
+                imageYear: "1. Jahrhundert",
+                imageMaterial: "Vergoldetes Eisen",
                 soundFileName: "DE_Einfuehrung")
     ]
     
@@ -58,8 +58,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
 
         /* Dev Informations */
         sceneView.delegate = self
-        sceneView.showsFPS = true
-        sceneView.showsNodeCount = true
+        sceneView.showsFPS = false
+        sceneView.showsNodeCount = false
 
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)

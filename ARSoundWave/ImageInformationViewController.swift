@@ -20,9 +20,9 @@ class ImageInformationViewController : UIViewController {
         if let actualImageInformation = imageInformation {
             self.nameLabel.text = actualImageInformation.imageTitle
             self.descriptionLabel.text = actualImageInformation.imageDescription
-            self.creator.text = actualImageInformation.imageCreator
+            self.creator.text = actualImageInformation.imagePlaceOfDiscovery
             self.year.text = actualImageInformation.imageYear
-            self.type.text = actualImageInformation.imageType
+            self.type.text = actualImageInformation.imageMaterial
             imageView.image = actualImageInformation.imageFile
             imageView.layer.zPosition = -5;
         }
