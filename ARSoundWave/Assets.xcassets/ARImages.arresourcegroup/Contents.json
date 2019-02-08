@@ -5,13 +5,31 @@
   },
   "resources" : [
     {
-      "filename" : "david.arreferenceimage"
+      "filename" : "de_fibel.arreferenceimage"
+    },
+    {
+      "filename" : "de_glocke.arreferenceimage"
+    },
+    {
+      "filename" : "de_steinschaedel.arreferenceimage"
+    },
+    {
+      "filename" : "de_zierscheibe.arreferenceimage"
     },
     {
       "filename" : "de-einfuehrung.arreferenceimage"
     },
     {
-      "filename" : "max.arreferenceimage"
+      "filename" : "en_bell.arreferenceimage"
+    },
+    {
+      "filename" : "en_brooch.arreferenceimage"
+    },
+    {
+      "filename" : "en_decorativeDisk.arreferenceimage"
+    },
+    {
+      "filename" : "en_stonehead.arreferenceimage"
     }
   ]
 }

@@ -19,38 +19,74 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     let images = [
         // Asign the name of the image left to ImageInformation
-/*        "DE-Bronzehorn" : ImageInformation(
-            imageName: "DE_Bronzehorn",
-            imageFile: UIImage(named: "Image2")!),
-        "DE-Einfuehrung" : ImageInformation(
-            imageName: "DE_Einfuehrung",
-            imageFile: UIImage(named: "Image2")!),
-        "DE-Eisenzeit" : ImageInformation(
-            imageName: "DE_Eisenzeit",
-            imageFile: UIImage(named: "Image2")!),
-        "DE-Einfuehrung" : ImageInformation(
-            imageName: "DE_Grafschaft",
-            imageFile: UIImage(named: "Image2")!),
-        "EN-Bronzehorn" : ImageInformation(
-            imageName: "EN_Bronzehorn",
-            imageFile: UIImage(named: "Image2")!),
-        "EN-Einfuehrung" : ImageInformation(
-            imageName: "EN_Einfuehrung",
-            imageFile: UIImage(named: "Image2")!),
-        "EN-Eisenzeit" : ImageInformation(
-            imageName: "EN_Eisenzeit",
-            imageFile: UIImage(named: "Image2")!),
-        "EN-Grafschaft" : ImageInformation(
-            imageName: "EN_Grafschaft",
-            imageFile: UIImage(named: "Image2")!)*/
-        "de-einfuehrung" : ImageInformation (
+
+        "de_fibel" : ImageInformation (
                 imageTitle: "Fibel",
                 imageDescription: "Fibeln waren im frühen Mittelalter verbreitet und wurden zur Befestigung von Umhängen verwendet.",
-                imageFile: UIImage(named: "Fibeln")!,
+                imageFile: UIImage(named: "img_fiebeln")!,
                 imagePlaceOfDiscovery: "Irland",
-                imageYear: "1. Jahrhundert",
-                imageMaterial: "Vergoldetes Eisen",
-                soundFileName: "DE_Einfuehrung")
+                imageYear: "1850 v. Chr.",
+                imageMaterial: "Kupfer",
+                soundFileName: "de_fibel"),
+        "en_brooch" : ImageInformation (
+                imageTitle: "Brooch",
+                imageDescription: "Fibulae were very popular in medieval Ireland and were used to fasten garments.",
+                imageFile: UIImage(named: "img_fiebeln")!,
+                imagePlaceOfDiscovery: "Ireland",
+                imageYear: "1850 B.C.",
+                imageMaterial: "Copper",
+                soundFileName: "en_brooch"),
+
+        "de_glocke" : ImageInformation (
+                imageTitle: "Glocke",
+                imageDescription: "Diese traditionelle Glocke wird standesgemäß mit dem heiligen Patrick in Verbindung gebracht und war das Symbol des damaligen Krieges.",
+                imageFile: UIImage(named: "img_glocke")!,
+                imagePlaceOfDiscovery: "Irland",
+                imageYear: "1105 v. Chr.",
+                imageMaterial: "Bronze und Eisen",
+                soundFileName: "de_glocke"),
+        "en_bell" : ImageInformation (
+                imageTitle: "Bell",
+                imageDescription: "This traditional bell is associated with St. Patrick and was the symbol of the war at that time.",
+                imageFile: UIImage(named: "img_glocke")!,
+                imagePlaceOfDiscovery: "Ireland",
+                imageYear: "1105 B.C.",
+                imageMaterial: "Bronze and iron",
+                soundFileName: "en_bell"),
+
+        "de_steinschaedel" : ImageInformation (
+                imageTitle: "Steinschädel",
+                imageDescription: "Der Schädel besitzt drei Gesichter und stammt vermutlich aus Corleck. Der Kopf stellt eine jüdische Gottheit mit verschiedenen Gesichtsausdrücken dar.",
+                imageFile: UIImage(named: "img_steinschaedel")!,
+                imagePlaceOfDiscovery: "Irland",
+                imageYear: "1./2. Jh.v. Chr.",
+                imageMaterial: "Quarz-Kristall",
+                soundFileName: "de_steinschaedel"),
+        "en_stonehead" : ImageInformation (
+                imageTitle: "Stonehead",
+                imageDescription: "The skull has three faces and probably comes from Corleck. The head represents a Jewish deity with different facial expressions.",
+                imageFile: UIImage(named: "img_steinschaedel")!,
+                imagePlaceOfDiscovery: "Ireland",
+                imageYear: "1./2. century B.C.",
+                imageMaterial: "Quartz-Crystal",
+                soundFileName: "en_stonehead"),
+
+        "de_zierscheibe" : ImageInformation (
+                imageTitle: "Zierscheibe",
+                imageDescription: "Nur insgesamt sieben dieser Exemplare wurde in Irland gefunden. Alle scheiben weisen ein ähnliches Dekort auf.",
+                imageFile: UIImage(named: "img_zierscheibe")!,
+                imagePlaceOfDiscovery: "Irland",
+                imageYear: "1./2. Jh.v. Chr.",
+                imageMaterial: "Bronze",
+                soundFileName: "de_zierscheibe"),
+        "en_decorativeDisk" : ImageInformation (
+                imageTitle: "Decorative disc",
+                imageDescription: "Only a total of seven of these specimens were found in Ireland. All discs have a similar decoration.",
+                imageFile: UIImage(named: "img_zierscheibe")!,
+                imagePlaceOfDiscovery: "Ireland",
+                imageYear: "1./2. century B.C.",
+                imageMaterial: "Quartz-Crystal",
+                soundFileName: "en_decorativeDisk"),
     ]
     
     override func viewDidLoad() {
